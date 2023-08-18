@@ -5,10 +5,9 @@ sizeBtn.addEventListener('click' , function() {
     let layoutInput = prompt('Enter the lenght of one side of your sketchpad:');
     let layoutNumber = parseFloat(layoutInput);
 
-    for (let i = 0; i <= layoutNumber; i++){
+    for (let i = 0; i <= layoutNumber*layoutNumber; i++){
         let square = document.createElement('div');
         square.classList.add('square');
         container.appendChild(square);
     }
-
 });
