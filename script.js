@@ -36,7 +36,14 @@ sizeBtn.addEventListener('click' , function() {
                 square.classList.add('erase');
             });
         });
-    
+        
+        //choosing clear table
+        const clear = document.getElementById('clear');
+        clear.addEventListener('click' , function() {
+            for (let i = 0; i <= layoutNumber*layoutNumber-1; i++){
+                square.remove();
+            }
+        })
     
     }
 });
