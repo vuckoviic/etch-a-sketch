@@ -31,8 +31,14 @@ body{
     margin-top: 150px;
 }
 
-.square{
+.square,
+.erase{
     border: 1px solid gray;
     background-color: white;
     flex-wrap: wrap;
+}
+
+.hover{
+    background-color: black;
+    border: 1px solid black;
 }

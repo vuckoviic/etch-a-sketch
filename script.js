@@ -18,11 +18,26 @@ sizeBtn.addEventListener('click' , function() {
         square.style.height = `${squareSize}px`;
 
         container.appendChild(square);
-        
-        square.addEventListener('mouseover' , function(){
-            square.classList.remove('square');
-            square.classList.add('hover');
+
+        //choosing color
+        const draw = document.getElementById('draw');
+        draw.addEventListener('click' , function(){
+            square.addEventListener('mouseover' , function(){
+                square.classList.remove('square');
+                square.classList.add('hover');
+            })
         })
+        
+        //choosing erase
+        const erase = document.getElementById('erase');
+        erase.addEventListener('click' , function(){
+            square.addEventListener('mouseover' , function(){
+                square.classList.remove('hover');
+                square.classList.add('erase');
+            });
+        });
+    
+    
     }
 });
 
