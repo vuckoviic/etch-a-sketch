@@ -1,6 +1,9 @@
 body{
+    display: flex;
+    flex-direction: column;
     background-image: url(images/bg.jpg);
     font-family: 'Bradley Hand', cursive;
+    margin: 0;
 }
 
 .buttons {
@@ -12,18 +15,23 @@ body{
 }
 
 .buttons button {
-    height: 80px;
-    width: 150px;
+    height: 60px;
+    width: 120px;
     border-radius: 25px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(207, 206, 206);
+    font-size: 26px;
+    font-family: 'Apple Chancery', cursive;
 }
 
 .container{
     display: flex;
     height: 700px;
-    width: 720px;
-    border: 5px solid black;
+    width: 700px;
+    border: 1px solid black;
     background-color: white;
     flex-wrap: wrap;
+    gap: 0px;
 }
 
 #btnAndCont{
@@ -33,6 +41,7 @@ body{
 
 .square,
 .erase{
+    display: flex;
     border: 1px solid gray;
     background-color: white;
     flex-wrap: wrap;
@@ -41,4 +50,26 @@ body{
 .hover{
     background-color: black;
     border: 1px solid black;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(207, 206, 206);
+    height: 50px;
+    font-size: 22px;
+    gap: 5px;
+    margin-top: 29px;
+}
+
+footer img {
+    height: 30px;
+    width: 30px;
+}
+
+footer a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
 }

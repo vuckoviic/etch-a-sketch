@@ -11,21 +11,24 @@ sizeBtn.addEventListener('click' , function() {
     });
     squares = [];
 
-    if (layoutInput > 100){
-        alert('Error! You entered too big number!')
-    }
+    
 
     for (let i = 0; i <= layoutNumber*layoutNumber-1; i++){
+
+        if (layoutInput > 100){
+            alert('Error! You entered too big number!');
+            break;
+        }
 
         let square = document.createElement('div');
         square.classList.add('square');
 
-        let squareSize = 700 / layoutNumber;
-        square.style.width = `${squareSize}px`;
-        square.style.height = `${squareSize}px`;
-
         container.appendChild(square);
         squares.push(square);
+
+        let squareSize = 700 / layoutNumber - layoutNumber;
+        square.style.width = `${squareSize}px`;
+        square.style.height = `${squareSize}px`;
 
         //choosing color
         const draw = document.getElementById('draw');
@@ -44,14 +47,6 @@ sizeBtn.addEventListener('click' , function() {
                 square.classList.add('erase');
             });
         });
-        
-        //choosing clear table
-        const clear = document.getElementById('clear');
-        clear.addEventListener('click' , function() {
-            for (let i = 0; i <= layoutNumber*layoutNumber-1; i++){
-                square.remove();
-            }
-        })
     
     }
 });
