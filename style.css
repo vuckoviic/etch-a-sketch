@@ -1,0 +1,29 @@
+body{
+    background-image: url(images/bg.jpg);
+    font-family: 'Bradley Hand', cursive;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-left: 400px;
+}
+
+.buttons button {
+    height: 80px;
+    width: 150px;
+    border-radius: 25px;
+}
+
+.container{
+    height: 650px;
+    width: 650px;
+    border: 5px solid black;
+    margin-left: 50px;
+}
+
+#btnAndCont{
+    display: flex;
+    margin-top: 150px;
+}
