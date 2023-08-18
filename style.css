@@ -19,8 +19,8 @@ body{
 
 .container{
     display: flex;
-    height: 650px;
-    width: 650px;
+    height: 700px;
+    width: 720px;
     border: 5px solid black;
     background-color: white;
     flex-wrap: wrap;
@@ -32,8 +32,7 @@ body{
 }
 
 .square{
-    height: 38px;
-    width: 38px;
     border: 1px solid gray;
-    background-color: white
+    background-color: white;
+    flex-wrap: wrap;
 }
