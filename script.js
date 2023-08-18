@@ -18,5 +18,11 @@ sizeBtn.addEventListener('click' , function() {
         square.style.height = `${squareSize}px`;
 
         container.appendChild(square);
+        
+        square.addEventListener('mouseover' , function(){
+            square.classList.remove('square');
+            square.classList.add('hover');
+        })
     }
 });
+
