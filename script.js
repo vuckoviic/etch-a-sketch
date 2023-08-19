@@ -11,7 +11,7 @@ sizeBtn.addEventListener('click' , function() {
     });
     squares = [];
 
-    
+    container.style.gridTemplateColumns = `repeat(${layoutNumber}, 1fr)`; // Set the number of columns in the grid
 
     for (let i = 0; i <= layoutNumber*layoutNumber-1; i++){
 
@@ -26,9 +26,13 @@ sizeBtn.addEventListener('click' , function() {
         container.appendChild(square);
         squares.push(square);
 
-        let squareSize = 700 / layoutNumber - layoutNumber;
-        square.style.width = `${squareSize}px`;
-        square.style.height = `${squareSize}px`;
+        square.style.width = '100%';
+        square.style.height = '100%';
+        
+        square.addEventListener('mouseover' , function(){
+            square.classList.remove('square');
+            square.classList.add('hover');
+        });
 
         //choosing color
         const draw = document.getElementById('draw');
