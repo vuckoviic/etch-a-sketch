@@ -52,6 +52,19 @@ sizeBtn.addEventListener('click' , function() {
             });
         });
     
+
+        const rainbow = document.getElementById('rainbow');
+        rainbow.addEventListener('click' , function(){
+            const rainbowClass = document.querySelector('.rainbow');
+            let colors = ['#9400D3' , '#4B0082' , '#0000FF' , '#00FF00' , '#FFFF00' , '#FF7F00' , '#FF0000'];
+            let random_color = colors[Math.floor(Math.random() * colors.length)];
+            rainbowClass.style.backgroundColor = random_color;
+            square.addEventListener('mouseover' , function(){
+                square.classList.remove('square');
+                square.classList.add('rainbow');
+            });
+           
+        });
     }
 });
 
